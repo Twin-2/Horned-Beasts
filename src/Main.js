@@ -1,12 +1,16 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
+import beastsArray from './data';
 
 class Main extends React.Component{
+    
+   
+   
+    
     render(){
         return(
-            <div>
-                <HornedBeasts title="Spiney Devil" imageUrl="Lots of horns" description="lots of horns"/>
-                <HornedBeasts title="dragon" imageUrl="DND" description="breathes fire"/>
+            <div>            
+                {beastsArray.map( (value) => <HornedBeasts title={value.title} imageUrl={value.image_url} description={value.description} />)}
             </div>
         )
     }
