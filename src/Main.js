@@ -2,6 +2,7 @@ import React from 'react';
 import HornedBeasts from './HornedBeasts';
 import beastsArray from './data';
 
+
 class Main extends React.Component{
     
    
