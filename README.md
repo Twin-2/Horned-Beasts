@@ -101,4 +101,8 @@ Start time: 4:20pm
 
 Finish time: 5:58pm
 
+<<<<<<< HEAD
 Actual time needed to complete: 1:38
+=======
+Actual time needed to complete: 1:38.
+>>>>>>> working-branch
