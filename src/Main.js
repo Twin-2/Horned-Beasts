@@ -1,12 +1,19 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
+import beastsArray from './data';
+import {Image, Carousel} from 'react-bootstrap';
 
 class Main extends React.Component{
+    
+   
+   
+    
     render(){
         return(
             <div>
-                <HornedBeasts title="Spiney Devil" imageUrl="Lots of horns" description="lots of horns"/>
-                <HornedBeasts title="dragon" imageUrl="DND" description="breathes fire"/>
+                <Carousel>
+                    {beastsArray.map( (value) => <Carousel.Item><HornedBeasts className="d-block w-100" title={value.title} imageUrl={value.image_url} description={value.description} /></Carousel.Item> )}
+                </Carousel>
             </div>
         )
     }
