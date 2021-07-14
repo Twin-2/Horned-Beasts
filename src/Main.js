@@ -1,7 +1,7 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
 import beastsArray from './data';
-import {Image, Carousel} from 'react-bootstrap';
+import {Carousel} from 'react-bootstrap';
 
 class Main extends React.Component{
     
