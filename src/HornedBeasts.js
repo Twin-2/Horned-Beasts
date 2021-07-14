@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 class HornedBeasts extends React.Component{
     constructor(props) {
         super(props);
@@ -14,12 +15,15 @@ class HornedBeasts extends React.Component{
     
     render() {
         return(
-            <div>
-                <h2>{this.props.title}</h2>
-                <img src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.liked}></img>
-                <span>Hearts: {this.state.likes}</span>
-                <p>{this.props.description}</p>
+            <div class="container">
+                <div class="row align-item-start">
+                    <h2 class="">{this.props.title}</h2>
+                    <img src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.liked} class="rounded float-left" ></img>
+                    <span>Hearts: {this.state.likes}</span>
+                    <p>{this.props.description}</p>
+                </div>
             </div>
+            
         )
     }
 }
