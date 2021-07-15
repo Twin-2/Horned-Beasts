@@ -6,7 +6,7 @@ import './App.css';
 import SelectedBeast from './SelectedBeast';
 import beastsArray from './data';
 import 'bootstrap/dist/css/bootstrap.css';
-import {Modal, Button} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 
 
 
