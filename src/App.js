@@ -26,15 +26,17 @@ class App extends React.Component{
       show: input
     })
   }
-
-  handleClose = () => this.setShow(false);
-  handleShow = () => this.setShow(true);
-
+  
   selectImage = (index) => {
     this.setState({
       imageId: index
     })
   };
+
+  handleClose = () => this.setShow(false);
+  handleShow = () => this.setShow(true);
+
+  
 
 
 

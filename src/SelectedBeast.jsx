@@ -13,7 +13,7 @@ class SelectedBeast extends React.Component {
                 <Modal.Header>
                     <Modal.Title>Modal heading</Modal.Title>
                 </Modal.Header>
-                <img src={this.props.beasts[this.props.imageId].image_url} alt="alt prop"></img>
+                <img style={{ width: '50%' }} src={this.props.beasts[this.props.imageId].image_url} alt="alt prop"></img>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={this.handleClose}>
                         Close

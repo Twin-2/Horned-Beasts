@@ -12,11 +12,9 @@ class HornedBeasts extends React.Component{
 
     increaseModal = () => {
         this.props.displayAsModal(this.props.index)
+        this.props.setShow(true)
     }
-    handleShow = () => this.props.setShow(true);
-    // setShow = (input) => {
-    //     this.props.showModal(input)
-    // }
+    
   
     render() {
         return(
@@ -28,7 +26,7 @@ class HornedBeasts extends React.Component{
                         variant="top" 
                         src={this.props.imageUrl} 
                         alt={this.props.description}/>
-                    <Card.Body onClick={this.handleShow}>
+                    <Card.Body>
                         <Card.Text>{this.props.description}</Card.Text>
                         <Button 
                             variant="primary" 

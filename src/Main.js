@@ -9,8 +9,8 @@ class Main extends React.Component{
         this.props.displayAsModal(index)
     }
 
-    setShow = () => {
-        this.props.showModal()
+    setShow = (value) => {
+        this.props.showModal(value)
     }
     
     render(){
