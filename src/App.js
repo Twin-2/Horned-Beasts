@@ -48,15 +48,8 @@ class App extends React.Component{
           beasts={beastsArray}
           isShowing={this.state.show}
           displayAsModal={this.selectImage}
-          showModal={this.setShow}
-        />
+          showModal={this.setShow}/>
         <Footer />
-        
-    
-        <Button variant="primary" onClick={this.handleShow}>
-          Launch demo modal
-        </Button>
-
         <Modal show={this.state.show} onHide={this.handleClose}>
           <div><SelectedBeast imageId={this.state.imageId} beasts={beastsArray} setShow={this.setShow}/></div>
         </Modal>

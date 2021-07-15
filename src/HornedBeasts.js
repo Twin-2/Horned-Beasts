@@ -15,6 +15,11 @@ class HornedBeasts extends React.Component{
         this.props.setShow(true)
     }
     
+    liked = () => {
+        this.setState({
+            likes: this.state.likes + 1
+        })
+    }
   
     render() {
         return(
