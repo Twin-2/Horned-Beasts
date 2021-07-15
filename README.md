@@ -107,7 +107,7 @@ Actual time needed to complete: 1:38.
 # Day 03 Lab
 
 ## Netlify link
-[Netlify](https://app.netlify.com/sites/brave-hugle-689164/deploys/60f0b5ed545845197d381176)
+[Netlify](https://60f0b5ed545845197d381176--brave-hugle-689164.netlify.app/)
 
 ## Number and name of feature: Feature #1
 
