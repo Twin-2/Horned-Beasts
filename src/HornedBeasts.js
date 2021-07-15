@@ -1,27 +1,42 @@
 import React from 'react';
-
+import {Card, Button} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class HornedBeasts extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            likes: 0
+            likes: 0,
         }
     }
 
-    liked = () => {
-        this.setState({ likes: this.state.likes + 1})
+    increaseModal = () => {
+        this.props.displayAsModal(this.props.index)
     }
-    
+    handleShow = () => this.props.setShow(true);
+    // setShow = (input) => {
+    //     this.props.showModal(input)
+    // }
+  
     render() {
         return(
-            <div class="container">
-                <div class="row align-item-start">
-                    <h2 class="">{this.props.title}</h2>
-                    <img src={this.props.imageUrl} alt={this.props.description} title={this.props.title} onClick={this.liked} class="rounded float-left" ></img>
-                    <span>Hearts: {this.state.likes}</span>
-                    <p>{this.props.description}</p>
-                </div>
+            <div>
+                <Card className="float-left" style={{ width: '18rem' }}>
+                <Card.Title>{this.props.title}{console.log(this.props.index)}</Card.Title>
+                    <Card.Img 
+                        onClick={this.increaseModal}
+                        variant="top" 
+                        src={this.props.imageUrl} 
+                        alt={this.props.description}/>
+                    <Card.Body onClick={this.handleShow}>
+                        <Card.Text>{this.props.description}</Card.Text>
+                        <Button 
+                            variant="primary" 
+                            onClick={this.liked}>
+                                Hearts: {this.state.likes}
+                        </Button>
+                    </Card.Body>
+                </Card>
             </div>
             
         )

@@ -1,23 +1,44 @@
 import React from 'react';
 import HornedBeasts from './HornedBeasts';
-import beastsArray from './data';
-import {Carousel} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 
 class Main extends React.Component{
     
    
-   
+    selectImage = (index) => {
+        this.props.displayAsModal(index)
+    }
+
+    setShow = () => {
+        this.props.showModal()
+    }
     
     render(){
         return(
-            <div>
-                <Carousel>
-                    {beastsArray.map( (value) => <Carousel.Item><HornedBeasts className="d-block w-100" title={value.title} imageUrl={value.image_url} description={value.description} /></Carousel.Item> )}
-                </Carousel>
+            <div className="container">
+                <div className="row text-center"> 
+                    {this.props.beasts.map( (beast, idx) => 
+                       <div>
+                        <HornedBeasts
+                            
+                            key={idx}
+                            index={idx}
+                            title={beast.title} 
+                            imageUrl={beast.image_url} 
+                            description={beast.description} 
+                            displayAsModal={this.selectImage}
+                            setShow={this.setShow}
+                        />
+                        </div>
+                    )}
+                </div>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
 
 export default Main;
+
+
+                
