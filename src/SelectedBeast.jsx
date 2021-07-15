@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button, Card } from 'react-bootstrap';
+import { Modal, Button, } from 'react-bootstrap';
 
 
 class SelectedBeast extends React.Component {
@@ -19,18 +19,6 @@ class SelectedBeast extends React.Component {
                         Close
                     </Button>
                 </Modal.Footer>
-
-                {/* <Card className="float-left" style={{ width: '18rem' }}>
-                    <Card.Title>{beastsArray.title}</Card.Title>
-                    <Card.Img
-                        // onClick={beast.increaseModal}
-                        variant="top"
-                        src={beastsArray.imageUrl}
-                        alt={beastsArray.description} />
-                    <Card.Body>
-                        <Card.Text>{beastsArray.description}</Card.Text>
-                    </Card.Body>
-                </Card> */}
             </div>
         )
     }
