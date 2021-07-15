@@ -18,21 +18,6 @@ class HornedBeasts extends React.Component{
   
     render() {
         return(
-<<<<<<< HEAD
-            <div className="container">
-                <div className="row align-item-start">
-                    <h2 >{this.props.title}</h2>
-                    <img 
-                        className={this.props.className} 
-                        src={this.props.imageUrl} 
-                        alt={this.props.description} 
-                        title={this.props.title} 
-                        onClick={this.liked} 
-                    ></img>
-                    <span>Hearts: {this.state.likes}</span>
-                    <p>{this.props.description}</p>
-                </div>
-=======
             <div>
                 <Card className="float-left" style={{ width: '18rem' }}>
                 <Card.Title>{this.props.title}{console.log(this.props.index)}</Card.Title>
@@ -50,7 +35,6 @@ class HornedBeasts extends React.Component{
                         </Button>
                     </Card.Body>
                 </Card>
->>>>>>> 428430f0fa53f14855905f483a41aa06d486e65b
             </div>
             
         )

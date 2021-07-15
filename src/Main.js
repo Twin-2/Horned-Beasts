@@ -15,21 +15,6 @@ class Main extends React.Component{
     
     render(){
         return(
-<<<<<<< HEAD
-            <div>
-                <Carousel variant="dark">
-                    {beastsArray.map( (value, idx) => 
-                        <Carousel.Item>
-                            <HornedBeasts 
-                                key={idx}
-                                className="d-block w-100" 
-                                title={value.title} 
-                                imageUrl={value.image_url} 
-                                description={value.description} />
-                        </Carousel.Item>
-                         )}
-                </Carousel>
-=======
             <div className="container">
                 <div className="row text-center"> 
                     {this.props.beasts.map( (beast, idx) => 
@@ -47,7 +32,6 @@ class Main extends React.Component{
                         </div>
                     )}
                 </div>
->>>>>>> 428430f0fa53f14855905f483a41aa06d486e65b
             </div>
         );
     };
@@ -57,9 +41,4 @@ class Main extends React.Component{
 export default Main;
 
 
-<<<<<<< HEAD
-export default Main;
-
-=======
                 
->>>>>>> 428430f0fa53f14855905f483a41aa06d486e65b
