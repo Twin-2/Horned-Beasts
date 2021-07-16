@@ -44,14 +44,9 @@ class App extends React.Component{
   handleClose = () => this.setShow(false);
   handleShow = () => this.setShow(true);
 
-  resetBeasts = () => {
-    this.setState({
-      data: beastsArray
-    })
-  }
 
   filterBeasts = () => {
-    let filteredBeasts = this.state.data.filter( (beast, idx) => beast.horns === this.state.selectedHorns)
+    let filteredBeasts = beastsArray.filter( (beast, idx) => beast.horns === this.state.selectedHorns)
     this.setState({
         data: filteredBeasts
     })

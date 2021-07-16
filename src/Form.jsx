@@ -7,7 +7,6 @@ class Forms extends React.Component {
     selectHorns = (e) => {
         e.preventDefault();
         this.props.selectedHorns(e.target.value)
-        this.props.reset();
     }
 
     onSubmit = (e) => {
