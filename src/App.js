@@ -6,8 +6,8 @@ import './App.css';
 import SelectedBeast from './SelectedBeast';
 import beastsArray from './data';
 import 'bootstrap/dist/css/bootstrap.css';
-import {Modal, Button} from 'react-bootstrap';
-
+import {Modal} from 'react-bootstrap';
+import Forms from './Form';
 
 
 
@@ -15,9 +15,10 @@ class App extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      data: {beastsArray},
+      data: beastsArray,
       show: false,
-      imageId: 0
+      imageId: 0,
+      selectedHorns: 0
     }
   }
 
@@ -33,25 +34,54 @@ class App extends React.Component{
     })
   };
 
+  selectedHorns = (value) => {
+    this.setState({
+      selectedHorns: parseInt(value)
+    })
+  }
+
+
   handleClose = () => this.setShow(false);
   handleShow = () => this.setShow(true);
 
-  
+  resetBeasts = () => {
+    this.setState({
+      data: beastsArray
+    })
+  }
 
+  filterBeasts = () => {
+    let filteredBeasts = this.state.data.filter( (beast, idx) => beast.horns === this.state.selectedHorns)
+    this.setState({
+        data: filteredBeasts
+    })
+  }
 
 
   render() {
     return (
-      <div>
-        <Header />
+      <div className="row text-center">
+        <Header id='header'/>
+        <Forms 
+          reset={this.resetBeasts} 
+          selectedHorns={this.selectedHorns} 
+          filter={this.filterBeasts}/>
         <Main 
-          beasts={beastsArray}
+          id='main'
+          beasts={this.state.data}
           isShowing={this.state.show}
           displayAsModal={this.selectImage}
           showModal={this.setShow}/>
-        <Footer />
-        <Modal show={this.state.show} onHide={this.handleClose}>
-          <div><SelectedBeast imageId={this.state.imageId} beasts={beastsArray} setShow={this.setShow}/></div>
+        <Footer id='footer'/>
+        <Modal 
+          show={this.state.show} 
+          onHide={this.handleClose}>
+          <div>
+            <SelectedBeast 
+                imageId={this.state.imageId} 
+                beasts={beastsArray} 
+                setShow={this.setShow}/>
+          </div>
         </Modal>
       
       </div>
