@@ -1,5 +1,5 @@
 import React from 'react';
-import Form from 'react-bootstrap/Form'
+import { Form, Button } from 'react-bootstrap'
 
 class Forms extends React.Component {
 
@@ -7,7 +7,6 @@ class Forms extends React.Component {
     selectHorns = (e) => {
         e.preventDefault();
         this.props.selectedHorns(e.target.value)
-        this.props.reset();
     }
 
     onSubmit = (e) => {
@@ -18,18 +17,21 @@ class Forms extends React.Component {
     render() {
         return (
             <div>
-                <Form>
+                <Form id='selectHornsForm'>
                     <Form.Group
                         className="mb-3"
                         controlId="exampleForm.ControlInput1">
                         <Form.Label>How many horns are you looking for?</Form.Label>
-                        <select onChange={this.selectHorns}>
+                        <Form.Control
+                            as='select'
+                            onChange={this.selectHorns}
+                            style={{ width: '100%' }}>
                             <option>Number of Horns</option>
                             <option value={1}>1</option>
                             <option value={2}>2</option>
                             <option value={3}>3</option>
                             <option value={100}>100</option>
-                        </select>
+                        </Form.Control>
                         <button onClick={this.onSubmit}>Find those horns!</button>
 
                     </Form.Group>
@@ -42,3 +44,18 @@ class Forms extends React.Component {
 }
 
 export default Forms;
+
+<Form>
+    <Form.Group >
+        <Form.Label>Email address</Form.Label>
+        <Form.Control type="email" placeholder="Enter email" />
+        <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+        </Form.Text>
+    </Form.Group>
+
+
+    <Button variant="primary" type="submit">
+        Submit
+    </Button>
+</Form>
