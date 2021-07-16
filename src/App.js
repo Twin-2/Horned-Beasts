@@ -45,14 +45,8 @@ class App extends React.Component{
   handleClose = () => this.setShow(false);
   handleShow = () => this.setShow(true);
 
-  resetBeasts = () => {
-    this.setState({
-      data: beastsArray
-    })
-  }
-
   filterBeasts = () => {
-    let filteredBeasts = this.state.data.filter( (beast, idx) => beast.horns === this.state.selectedHorns)
+    let filteredBeasts = beastsArray.filter( (beast, idx) => beast.horns === this.state.selectedHorns)
     this.setState({
         data: filteredBeasts
     })
@@ -80,7 +74,7 @@ class App extends React.Component{
           <div>
             <SelectedBeast 
                 imageId={this.state.imageId} 
-                beasts={beastsArray} 
+                beasts={this.state.data} 
                 setShow={this.setShow}/>
           </div>
         </Modal>
