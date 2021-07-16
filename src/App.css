@@ -46,3 +46,8 @@ h1 {
   justify-content: center;
   background-color: #45F5E2;
 }
+
+#selectHornsForm {
+  display: flex;
+  justify-content: center;
+}
