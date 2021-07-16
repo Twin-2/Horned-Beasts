@@ -24,8 +24,8 @@ class HornedBeasts extends React.Component{
     render() {
         return(
             <div>
-                <Card className="float-left" style={{ width: '18rem' }}>
-                <Card.Title>{this.props.title}{console.log(this.props.index)}</Card.Title>
+                <Card className="float-left bg-info text-black" style={{ width: '18rem' }}>
+                <Card.Title>{this.props.title}</Card.Title>
                     <Card.Img 
                         onClick={this.increaseModal}
                         variant="top" 

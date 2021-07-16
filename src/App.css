@@ -37,3 +37,12 @@
   }
 }
 
+h1 {
+  background-color: #5FB1EB;
+  color:#3E4AF7
+}
+.beastCards {
+  display: flex;
+  justify-content: center;
+  background-color: #45F5E2;
+}
